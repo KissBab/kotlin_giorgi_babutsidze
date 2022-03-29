@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">davaleba 3</string>
+    <string name="username">USERNAME</string>
+    <string name="password">PASSWORD</string>
+    <string name="get_started">GET STARTED</string>
+    <string name="not_registered">Not Registered?</string>
+    <string name="create_account">Create Account</string>
+    <string name="not_registered_create_account">Not Registered?  <b><u>Create Account</u></b></string>
+</resources>
