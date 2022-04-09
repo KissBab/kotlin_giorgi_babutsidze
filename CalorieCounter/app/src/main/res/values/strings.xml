@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Calorie Counter</string>
+    <string name="distance_run">Run Distance</string>
+    <string name="distance_swam">Swim Distance</string>
+    <string name="calories_burnt">Calories</string>
+    <string name="save">Save</string>
+</resources>
