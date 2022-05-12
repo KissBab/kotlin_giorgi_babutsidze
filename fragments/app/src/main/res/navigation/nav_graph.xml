@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment2">
+
+    <fragment
+        android:id="@+id/homeFragment2"
+        tools:layout="@layout/fragment_home"
+        android:name="com.example.fragments.fragments.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment2_to_navigation"
+            app:destination="@id/navigation" />
+        <action
+            android:id="@+id/action_homeFragment2_to_dashboardFragment2"
+            app:destination="@id/dashboardFragment2" />
+        <argument
+            android:name="amount"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardFragment2"
+        tools:layout="@layout/fragment_dashboard"
+        android:name="com.example.fragments.fragments.DashboardFragment"
+        android:label="DashboardFragment" >
+        <argument
+            android:name="amount"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment2"
+        tools:layout="@layout/fragment_notification"
+        android:name="com.example.fragments.fragments.NotificationFragment"
+        android:label="NotificationFragment" >
+        <action
+            android:id="@+id/action_notificationFragment2_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+    </fragment>
+    <navigation
+        android:id="@+id/navigation"
+        app:startDestination="@id/userFragment2">
+        <fragment
+            android:id="@+id/userFragment2"
+            android:name="com.example.fragments.fragments.UserFragment"
+            android:label="UserFragment"
+            tools:layout="@layout/fragment_user" />
+        <fragment
+            android:id="@+id/settingsFragment2"
+            android:name="com.example.fragments.fragments.SettingsFragment"
+            android:label="SettingsFragment"
+            tools:layout="@layout/fragment_settings" />
+        <deepLink
+            android:id="@+id/deepLink"
+            android:autoVerify="true"
+            app:uri="www.youtibe.com" />
+    </navigation>
+</navigation>
