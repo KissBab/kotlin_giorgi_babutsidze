@@ -9,7 +9,7 @@ class SQLHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, null
     companion object {
         private const val DATABASE_NAME = "airplaneMode.db"
         private const val DATABASE_VERSION = 1
-        private const val TABLE_NAME = "airplane_table"
+        private const val TABLE_NAME = "airplaneMode_table"
         private const val ID = "ID"
         private const val STATE = "STATE"
         private const val TIME = "TIME"
@@ -17,10 +17,7 @@ class SQLHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, null
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
-        val createTable = ("CREATE TABLE" + TABLE_NAME + "("
-                + ID + "INTEGER PRIMARY KEY, "
-                + STATE + "REAL, "
-                + TIME + "TEXT" + ")")
+        val createTable = ("CREATE TABLE" + TABLE_NAME + "(" + ID + "INTEGER PRIMARY KEY, " + STATE + "REAL, " + TIME + "TEXT" + ")")
         db?.execSQL(createTable)
     }
 
@@ -29,7 +26,7 @@ class SQLHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, null
         onCreate(db)
     }
 
-    fun insertAirplaneModeState(airplane: AirplaneModeModel): Long {
+    fun saveAirplaneModeState(airplane: AirplaneEntity): Long {
         val db = this.writableDatabase
 
         val contentValues = ContentValues()

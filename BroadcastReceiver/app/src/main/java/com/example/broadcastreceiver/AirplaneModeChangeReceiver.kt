@@ -10,19 +10,20 @@ class AirplaneModeChangeReceiver: BroadcastReceiver() {
     private lateinit var sqlHelper: SQLHelper;
 
     override fun onReceive(context: Context?, intent: Intent?) {
-        var isAirplaneModeEnabled: Boolean = intent?.getBooleanExtra("state", false) ?:return
+        var isAirplaneModeEnabled: Boolean = intent?.getBooleanExtra("state", false) ?: return
 
-        fun getAutoId(): Int {
+        fun getId(): Int {
             var random = Random()
-            return random.nextInt(1000000)
+            return random.nextInt(999999999)
         }
 
-        val airplane: AirplaneModeModel = AirplaneModeModel(getAutoId(), isAirplaneModeEnabled, Date())
-        val success = sqlHelper.insertAirplaneModeState(airplane)
+        val airplane: AirplaneEntity = AirplaneEntity(getId(), isAirplaneModeEnabled, Date())
+        val queryStatus = sqlHelper.saveAirplaneModeState(airplane)
 
-        if (success > -1) {
-            Toast.makeText(context, "Airplane Mode Added", Toast.LENGTH_SHORT).show()
+        if (queryStatus > -1) {
+            Toast.makeText(context, "Saved to database", Toast.LENGTH_SHORT).show()
         } else {
-            Toast.makeText(context, "Record couldn't added...", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Couldn't save to database", Toast.LENGTH_SHORT).show()
         }
+    }
 }
