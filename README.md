@@ -23,8 +23,8 @@ Will also be able to view contact information and meet popular users.
 **View pager 2**
 ---
 ## Creators:
-Jemal Sibashvili
-Giorgi Babutsidze
+- Jemal Sibashvili
+- Giorgi Babutsidze
 ---
 ## License & copyright
 © Jemal Sibashvili & Giorgi Babutsidze
