@@ -14,13 +14,13 @@ Will also be able to view contact information and meet popular users.
 
 ---
 ## Components Used:
-**Navigation component**
-**retrofit**
-**Broadcast receiver**
-**Work manager**
-**Card view**
-**Recycler view**
-**View pager 2**
+- Navigation component
+- retrofit
+- Broadcast receiver
+- Work manager
+- Card view
+- Recycler view
+- View pager 2
 ---
 ## Creators:
 - Jemal Sibashvili
