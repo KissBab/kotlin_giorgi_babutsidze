@@ -1,7 +1,7 @@
-#Movie House
+# Movie House
 **version 1.0.0**
 ---
-##Description:
+## Description:
 If you want to know the news about your favorite movies,
 we present the Movie House app. Here you can watch movies,
 get acquainted with the personal lives of actors and directors,
@@ -13,7 +13,7 @@ news without registering, although registration will be required to watch the mo
 Will also be able to view contact information and meet popular users.
 
 ---
-##Components Used:
+## Components Used:
 **Navigation component**
 **retrofit**
 **Broadcast receiver**
@@ -22,9 +22,9 @@ Will also be able to view contact information and meet popular users.
 **Recycler view**
 **View pager 2**
 ---
-##Creators:
+## Creators:
 Jemal Sibashvili
 Giorgi Babutsidze
 ---
-##License & copyright
+## License & copyright
 © Jemal Sibashvili & Giorgi Babutsidze
