@@ -1,7 +1,7 @@
 # Movie House
 **version 1.0.0**
 ---
-## Description:
+### Description:
 If you want to know the news about your favorite movies,
 we present the Movie House app. Here you can watch movies,
 get acquainted with the personal lives of actors and directors,
